@@ -3,7 +3,6 @@
 let popup = document.querySelector(".modal");
 let close = document.querySelector(".popup-close");
 const productListElement = document.querySelector("#product-list");
-// let itemId;
 
 productListElement.onclick = function (evt) {
     if (evt.target.className != "popup") return;
@@ -37,7 +36,6 @@ window.addEventListener("keydown", function (evt) {
         popup.classList.remove("modal-show");
     }
 })
-
 
 // ценновой фильтр (возврастание и убывание)
 

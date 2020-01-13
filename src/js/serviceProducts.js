@@ -106,47 +106,6 @@ class ServiceProducts {
 
         } 
 
-                //  <div class="modal-content">
-
-        //     <div class="popup-content">
-        //         <button class="popup-close" type="button">Закрыть</button>
-
-        //         <h2 class="modal-title">Стейк из говядины <span class="opacity-text">250 г</span></h2>
-
-        //         <nav class="popup-wrapper-description">
-
-        //             <p class="opacity-text">Описание</p>
-        //             <p class="modal-text">Стейк из поясничной части мраморной говядины. Рекомендуемая степень
-        //                 прожарки medium</p>
-        //             <p class="opacity-text">Состав</p>
-        //             <p class="modal-text">Микс салатов, лосось, соус терияки, соус Унаги</p>
-        //             <p class="opacity-text">Пищевая ценность</p>
-
-        //             <table class="modal__table-nutrients">
-        //                 <tr class="modal__table-numbers">
-        //                     <td>650</td>
-        //                     <td>34</td>
-        //                     <td>60</td>
-        //                     <td>12</td>
-        //                 </tr>
-        //                 <tr class="opacity-text">
-        //                     <th>ккал</th>
-        //                     <th>белки</th>
-        //                     <th>жиры</th>
-        //                     <th>углеводы</th>
-        //                 </tr>
-        //             </table>
-
-        //         </nav>
-        //     </div>
-
-        //     <div class="modal-gallery">
-        //         <p class="modal-img"><img src="src/img/shawarma-1.png" alt="Шаверма" class="gallery_modal-img"></p>
-        //     </div>
-
-        // </div>
-        
-
         const modalContent = serviceCreateElement.getElement({
             tagName: 'div',
             classNames: 'modal-content',
@@ -181,7 +140,6 @@ class ServiceProducts {
         const modalText = serviceCreateElement.getElement({
             tagName: 'p',
             classNames: 'modal-text',
-            // textContent: 'Стейк из поясничной части мраморной говядины. Рекомендуемая степень прожарки medium',
         });
         const modalOpacityTextContent = serviceCreateElement.getElement({
             tagName: 'p',
@@ -208,22 +166,18 @@ class ServiceProducts {
         });
         const modalTableTdOne = serviceCreateElement.getElement({
             tagName: 'td',
-            // textContent: '650',
             classNames: 'modalTableTdOne',
         });
         const modalTableTdTwo = serviceCreateElement.getElement({
             tagName: 'td',
-            // textContent: '34',
             classNames: 'modalTableTdTwo',
         });
         const modalTableTdThree = serviceCreateElement.getElement({
             tagName: 'td',
-            // textContent: '60',
             classNames: 'modalTableTdThree',
         });
         const modalTableTdFour = serviceCreateElement.getElement({
             tagName: 'td',
-            // textContent: '12',
             classNames: 'modalTableTdFour',
         });
         const modalTableTrOpacitty = serviceCreateElement.getElement({
@@ -287,8 +241,6 @@ class ServiceProducts {
         
 
     }
-
-    
 
     action() {
         //
