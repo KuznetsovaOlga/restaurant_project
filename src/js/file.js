@@ -6,7 +6,22 @@ const productListElement = document.querySelector("#product-list");
 
 productListElement.onclick = function (evt) {
     if (evt.target.className != "popup") return;
-    console.log(evt.target.parentNode.parentNode.getAttribute("data-price"));
+    itemId = evt.target.parentNode.parentNode.getAttribute("data-id");
+   
+    let modalItem = productsCatalog.filter(function(el) {
+        return (itemId === el.id);
+    });
+    document.querySelector(".modal-title").textContent = modalItem[0].name;
+    
+    document.querySelector(".gallery_modal-img").style.background = `url(${modalItem[0].imgBig}) no-repeat center`;
+    document.querySelector(".modal-text-composition").textContent = modalItem[0].descriptionComposition;
+    document.querySelector(".modal-text").textContent = modalItem[0].description;
+    document.querySelector(".modalTableTdOne").textContent  = modalItem[0].calories;
+    document.querySelector(".modalTableTdTwo").textContent  = modalItem[0].squirrels;
+    document.querySelector(".modalTableTdThree").textContent  = modalItem[0].fats;
+    document.querySelector(".modalTableTdFour").textContent  = modalItem[0].carbohydrates;
+
+   
     popup.classList.add("modal-show");
     evt.preventDefault();
 };
@@ -18,10 +33,9 @@ close.addEventListener("click", function (evt) {
 
 window.addEventListener("keydown", function (evt) {
     if (evt.keyCode === 27) {
-        popup.classList.toggle("modal-show");
+        popup.classList.remove("modal-show");
     }
 })
-
 
 // ценновой фильтр (возврастание и убывание)
 
