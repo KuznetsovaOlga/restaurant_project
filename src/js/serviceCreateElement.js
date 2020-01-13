@@ -11,8 +11,12 @@ class ServiceCreateElement {
             element.style.backgroundImage = options.backgroundImage;
         }
 
-        if ('data' in options && 'dataAttributeName' in options) {
-            element.setAttribute(options.dataAttributeName, options.data); 
+        if ('dataPrice' in options && 'dataPriceAttributeName' in options) {
+            element.setAttribute(options.dataPriceAttributeName, options.dataPrice); 
+        }
+
+        if ('dataId' in options && 'dataIdAttributeName' in options) {
+            element.setAttribute(options.dataIdAttributeName, options.dataId); 
         }
         
         return element; 
